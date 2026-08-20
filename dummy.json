@@ -1,0 +1,544 @@
+{
+    "categories": [
+        {
+            "type": "berita",
+            "name": "Berita Utama",
+            "slug": "berita-utama",
+            "sort": 1,
+            "description": "Kumpulan berita utama dan informasi terhangat"
+        },
+        {
+            "type": "berita",
+            "name": "Kegiatan & Agenda",
+            "slug": "kegiatan-dan-agenda",
+            "sort": 2,
+            "description": "Dokumentasi kegiatan dan program kerja aktif"
+        },
+        {
+            "type": "berita",
+            "name": "Edukasi & Artikel",
+            "slug": "edukasi-dan-artikel",
+            "sort": 3,
+            "description": "Artikel informatif dan wawasan edukatif untuk masyarakat"
+        },
+        {
+            "type": "pengumuman",
+            "name": "Pengumuman Resmi",
+            "slug": "pengumuman-resmi",
+            "sort": 1,
+            "description": "Pemberitahuan resmi pimpinan dan instansi"
+        },
+        {
+            "type": "pengumuman",
+            "name": "Jadwal Pelayanan",
+            "slug": "jadwal-pelayanan",
+            "sort": 2,
+            "description": "Informasi jadwal operasional dan agenda pelayanan"
+        },
+        {
+            "type": "galeri",
+            "name": "Dokumentasi Kegiatan",
+            "slug": "dokumentasi-kegiatan",
+            "sort": 1,
+            "description": "Kumpulan foto kegiatan dan momen penting"
+        },
+        {
+            "type": "galeri",
+            "name": "Fasilitas & Sarana",
+            "slug": "fasilitas-dan-sarana",
+            "sort": 2,
+            "description": "Dokumentasi sarana prasarana dan lingkungan"
+        },
+        {
+            "type": "download",
+            "name": "Formulir Pelayanan",
+            "slug": "formulir-pelayanan",
+            "sort": 1,
+            "description": "Blanko dan formulir permohonan layanan publik"
+        },
+        {
+            "type": "download",
+            "name": "Regulasi & SOP",
+            "slug": "regulasi-dan-sop",
+            "sort": 2,
+            "description": "Pedoman standar operasional prosedur dan peraturan resmi"
+        },
+        {
+            "type": "banner",
+            "name": "Home Slider",
+            "slug": "home-slider",
+            "sort": 1,
+            "description": "Banner slider utama pada halaman depan"
+        },
+        {
+            "type": "banner",
+            "name": "Sidebar Slider",
+            "slug": "sidebar-slider",
+            "sort": 2,
+            "description": "Banner slider sorotan pada sidebar"
+        }
+    ],
+    "posts": [
+        {
+            "type": "menu",
+            "title": "Header",
+            "slug": "header",
+            "data_loop": [
+                {
+                    "menu_id": "1",
+                    "menu_parent": "0",
+                    "menu_name": "Beranda",
+                    "menu_link": "/",
+                    "menu_description": "Halaman Utama",
+                    "menu_icon": "fa fa-home"
+                },
+                {
+                    "menu_id": "2",
+                    "menu_parent": "0",
+                    "menu_name": "Profil",
+                    "menu_link": "#",
+                    "menu_description": "Profil Lembaga & Organisasi",
+                    "menu_icon": "fa fa-building",
+                    "child": [
+                        {
+                            "menu_id": "21",
+                            "menu_parent": "2",
+                            "menu_name": "Tentang Kami",
+                            "menu_link": "/tentang-kami",
+                            "menu_description": "Informasi Singkat Lembaga",
+                            "menu_icon": "fa fa-info-circle"
+                        },
+                        {
+                            "menu_id": "22",
+                            "menu_parent": "2",
+                            "menu_name": "Visi & Misi",
+                            "menu_link": "/visi-dan-misi",
+                            "menu_description": "Arah dan Tujuan Utama",
+                            "menu_icon": "fa fa-bullseye"
+                        },
+                        {
+                            "menu_id": "23",
+                            "menu_parent": "2",
+                            "menu_name": "Struktur Organisasi",
+                            "menu_link": "/struktur-organisasi",
+                            "menu_description": "Bagan Tata Kelola",
+                            "menu_icon": "fa fa-sitemap"
+                        },
+                        {
+                            "menu_id": "24",
+                            "menu_parent": "2",
+                            "menu_name": "Tugas Pokok & Fungsi",
+                            "menu_link": "/tugas-pokok-dan-fungsi",
+                            "menu_description": "Tupoksi Pelayanan",
+                            "menu_icon": "fa fa-tasks"
+                        }
+                    ]
+                },
+                {
+                    "menu_id": "3",
+                    "menu_parent": "0",
+                    "menu_name": "Layanan & Info",
+                    "menu_link": "#",
+                    "menu_description": "Pusat Layanan dan Informasi",
+                    "menu_icon": "fa fa-concierge-bell",
+                    "child": [
+                        {
+                            "menu_id": "31",
+                            "menu_parent": "3",
+                            "menu_name": "Standar Pelayanan",
+                            "menu_link": "/standar-pelayanan-dan-prosedur",
+                            "menu_description": "Prosedur dan Syarat Layanan",
+                            "menu_icon": "fa fa-clipboard-check"
+                        },
+                        {
+                            "menu_id": "32",
+                            "menu_parent": "3",
+                            "menu_name": "Pengumuman",
+                            "menu_link": "/pengumuman",
+                            "menu_description": "Pengumuman Resmi",
+                            "menu_icon": "fa fa-bullhorn"
+                        },
+                        {
+                            "menu_id": "33",
+                            "menu_parent": "3",
+                            "menu_name": "Pusat Unduhan",
+                            "menu_link": "/download",
+                            "menu_description": "Dokumen & Formulir",
+                            "menu_icon": "fa fa-download"
+                        }
+                    ]
+                },
+                {
+                    "menu_id": "4",
+                    "menu_parent": "0",
+                    "menu_name": "Publikasi",
+                    "menu_link": "#",
+                    "menu_description": "Media dan Dokumentasi",
+                    "menu_icon": "fa fa-newspaper",
+                    "child": [
+                        {
+                            "menu_id": "41",
+                            "menu_parent": "4",
+                            "menu_name": "Berita & Artikel",
+                            "menu_link": "/berita",
+                            "menu_description": "Kabar Berita Terkini",
+                            "menu_icon": "fa fa-newspaper"
+                        },
+                        {
+                            "menu_id": "42",
+                            "menu_parent": "4",
+                            "menu_name": "Galeri Foto",
+                            "menu_link": "/galeri",
+                            "menu_description": "Dokumentasi Kegiatan",
+                            "menu_icon": "fa fa-images"
+                        }
+                    ]
+                },
+                {
+                    "menu_id": "5",
+                    "menu_parent": "0",
+                    "menu_name": "Kontak",
+                    "menu_link": "/#kontak",
+                    "menu_description": "Hubungi Kami",
+                    "menu_icon": "fa fa-phone"
+                }
+            ]
+        },
+        {
+            "type": "menu",
+            "title": "Footer",
+            "slug": "footer",
+            "data_loop": [
+                {
+                    "menu_id": "1",
+                    "menu_parent": "0",
+                    "menu_name": "Profil Utama",
+                    "menu_link": "#",
+                    "menu_description": "Profil Lembaga",
+                    "menu_icon": "fa fa-building",
+                    "child": [
+                        {
+                            "menu_id": "11",
+                            "menu_parent": "1",
+                            "menu_name": "Tentang Kami",
+                            "menu_link": "/tentang-kami",
+                            "menu_description": "Tentang",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "12",
+                            "menu_parent": "1",
+                            "menu_name": "Visi & Misi",
+                            "menu_link": "/visi-dan-misi",
+                            "menu_description": "Visi Misi",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "13",
+                            "menu_parent": "1",
+                            "menu_name": "Struktur Organisasi",
+                            "menu_link": "/struktur-organisasi",
+                            "menu_description": "Struktur",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "14",
+                            "menu_parent": "1",
+                            "menu_name": "Tugas Pokok & Fungsi",
+                            "menu_link": "/tugas-pokok-dan-fungsi",
+                            "menu_description": "Tupoksi",
+                            "menu_icon": "fa fa-angle-right"
+                        }
+                    ]
+                },
+                {
+                    "menu_id": "2",
+                    "menu_parent": "0",
+                    "menu_name": "Layanan & Regulasi",
+                    "menu_link": "#",
+                    "menu_description": "Layanan Publik",
+                    "menu_icon": "fa fa-clipboard-list",
+                    "child": [
+                        {
+                            "menu_id": "21",
+                            "menu_parent": "2",
+                            "menu_name": "Standar Pelayanan",
+                            "menu_link": "/standar-pelayanan-dan-prosedur",
+                            "menu_description": "SOP Layanan",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "22",
+                            "menu_parent": "2",
+                            "menu_name": "Pusat Unduhan",
+                            "menu_link": "/download",
+                            "menu_description": "Formulir & Dokumen",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "23",
+                            "menu_parent": "2",
+                            "menu_name": "Pengumuman",
+                            "menu_link": "/pengumuman",
+                            "menu_description": "Pengumuman Resmi",
+                            "menu_icon": "fa fa-angle-right"
+                        }
+                    ]
+                },
+                {
+                    "menu_id": "3",
+                    "menu_parent": "0",
+                    "menu_name": "Informasi & Media",
+                    "menu_link": "#",
+                    "menu_description": "Media Komunikasi",
+                    "menu_icon": "fa fa-newspaper",
+                    "child": [
+                        {
+                            "menu_id": "31",
+                            "menu_parent": "3",
+                            "menu_name": "Berita & Artikel",
+                            "menu_link": "/berita",
+                            "menu_description": "Kabar Berita",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "32",
+                            "menu_parent": "3",
+                            "menu_name": "Galeri Dokumentasi",
+                            "menu_link": "/galeri",
+                            "menu_description": "Galeri Foto",
+                            "menu_icon": "fa fa-angle-right"
+                        },
+                        {
+                            "menu_id": "33",
+                            "menu_parent": "3",
+                            "menu_name": "Hubungi Kami",
+                            "menu_link": "/#kontak",
+                            "menu_description": "Kontak Pengaduan",
+                            "menu_icon": "fa fa-angle-right"
+                        }
+                    ]
+                }
+            ]
+        },
+        {
+            "type": "page",
+            "title": "Tentang Kami",
+            "slug": "tentang-kami",
+            "description": "Profil komprehensif, sejarah dedikasi, serta komitmen kami dalam melayani masyarakat secara profesional dan transparan.",
+            "content": "<h2>Selamat Datang di Portal Resmi</h2><p>Kami adalah lembaga yang berkomitmen memberikan pelayanan terbaik, berkualitas, dan transparan bagi seluruh lapisan masyarakat. Dengan mengedepankan integritas, profesionalisme, dan pemanfaatan teknologi modern, kami terus berinovasi untuk mempermudah akses informasi dan layanan publik secara terpadu.</p><h3>Sejarah & Dedikasi</h3><p>Berdiri dengan semangat pengabdian dan peningkatan kualitas hidup bersama, institusi kami telah tumbuh menjadi pilar pelayanan yang terpercaya. Setiap program dan kebijakan yang dijalankan senantiasa berorientasi pada kepuasan masyarakat, efisiensi birokrasi, dan akuntabilitas kinerja.</p><h3>Nilai-Nilai Utama Pelayanan</h3><ul><li><strong>Integritas:</strong> Menjunjung tinggi kejujuran, etika profesi, dan keterbukaan informasi.</li><li><strong>Profesionalisme:</strong> Menyelesaikan setiap tanggung jawab dengan standar kompetensi tertinggi dan tepat waktu.</li><li><strong>Orientasi Masyarakat:</strong> Mengutamakan kenyamanan, keramahan, dan kemudahan bagi setiap penerima layanan.</li><li><strong>Inovasi Berkelanjutan:</strong> Mengadopsi transformasi digital untuk mewujudkan layanan yang cepat, mudah, dan terjangkau di mana saja.</li></ul>"
+        },
+        {
+            "type": "page",
+            "title": "Visi dan Misi",
+            "slug": "visi-dan-misi",
+            "description": "Visi masa depan dan misi strategis dalam mewujudkan pelayanan publik yang unggul, inklusif, dan berdaya saing tinggi.",
+            "content": "<h2>Visi</h2><p><em>\"Terwujudnya Pelayanan Publik yang Prima, Unggul, Modern, dan Berkeadilan Demi Kesejahteraan Masyarakat yang Berkelanjutan.\"</em></p><hr><h2>Misi</h2><ol><li><strong>Meningkatkan Kualitas Pelayanan:</strong> Menyediakan layanan yang responsif, cepat, akurat, dan ramah dengan standar operasional yang terukur.</li><li><strong>Penguatan Tata Kelola & Akuntabilitas:</strong> Mewujudkan sistem administrasi yang bersih, transparan, bebas pungutan liar, dan bertanggung jawab.</li><li><strong>Pemanfaatan Teknologi & Inovasi:</strong> Mengoptimalkan integrasi sistem informasi digital guna mempercepat proses kerja dan mempermudah akses publik.</li><li><strong>Peningkatan Kualitas Sumber Daya Manusia:</strong> Mengembangkan kapasitas, etika, dan keahlian aparatur/petugas secara berkala.</li><li><strong>Mendorong Partisipasi Publik:</strong> Membuka ruang komunikasi dua arah, aspirasi, dan saran konstruktif dari seluruh elemen masyarakat.</li></ol>"
+        },
+        {
+            "type": "page",
+            "title": "Struktur Organisasi",
+            "slug": "struktur-organisasi",
+            "description": "Bagan struktur kepemimpinan, jajaran manajerial, dan divisi kerja yang solid dan berdedikasi tinggi.",
+            "content": "<h2>Tata Kelola & Struktur Kepemimpinan</h2><p>Struktur organisasi kami disusun secara proporsional dan efektif guna memastikan seluruh alur komunikasi, koordinasi program, dan pengambilan keputusan dapat berjalan secara harmonis dan akuntabel.</p><h3>Unsur Kepemimpinan & Divisi:</h3><ul><li><strong>Pimpinan Utama:</strong> Mengarahkan kebijakan strategis, pengawasan umum, serta penjaminan mutu seluruh lini pelayanan.</li><li><strong>Sekretariat & Tata Usaha:</strong> Mengelola administrasi umum, kepegawaian, keuangan, dan dokumentasi kelembagaan.</li><li><strong>Divisi Layanan & Operasional:</strong> Menangani pemrosesan layanan langsung, perizinan, administrasi warga/siswa/pasien, dan verifikasi berkas.</li><li><strong>Divisi Data & Informasi:</strong> Mengelola sistem digital, publikasi berkala, transparansi informasi publik, dan dokumentasi media.</li><li><strong>Unit Pengaduan & Penjamin Mutu:</strong> Menerima saran, evaluasi kepuasan masyarakat, dan penanganan tindak lanjut aduan.</li></ul>"
+        },
+        {
+            "type": "page",
+            "title": "Tugas Pokok dan Fungsi",
+            "slug": "tugas-pokok-dan-fungsi",
+            "description": "Rincian tugas pokok dan fungsi (Tupoksi) dalam menyelenggarakan urusan operasional dan pelayanan masyarakat.",
+            "content": "<h2>Tugas Pokok</h2><p>Melaksanakan urusan pelayanan, pembinaan, pengelolaan administrasi, dan penyelenggaraan program kerja sesuai dengan kewenangan serta peraturan perundang-undangan yang berlaku.</p><h2>Fungsi Utama</h2><ol><li>Perumusan kebijakan teknis dan rencana strategis di bidang pelayanan dan operasional lembaga.</li><li>Pelaksanaan pelayanan administrasi umum, verifikasi data, dan penerbitan dokumen resmi.</li><li>Pengawasan, pemantauan, dan evaluasi berkala terhadap mutu pelaksanaan program kerja.</li><li>Pengelolaan sarana, prasarana, aset, dan keuangan secara tertib, transparan, dan akuntabel.</li><li>Pemberian bimbingan teknis, informasi publik, dan konsultasi kepada masyarakat/pengguna layanan.</li></ol>"
+        },
+        {
+            "type": "page",
+            "title": "Standar Pelayanan dan Prosedur",
+            "slug": "standar-pelayanan-dan-prosedur",
+            "description": "Pedoman alur proses, persyaratan berkas, dan kepastian waktu penyelesaian layanan masyarakat.",
+            "content": "<h2>Maklumat Standar Pelayanan</h2><p>Kami berkomitmen memberikan pelayanan prima yang cepat, tepat, dan tanpa diskriminasi. Berikut adalah alur umum permohonan layanan:</p><h3>Alur Prosedur Permohonan:</h3><ol><li><strong>Pengajuan Permohonan:</strong> Pemohon datang ke loket pelayanan atau mengakses formulir digital melalui website.</li><li><strong>Verifikasi Berkas:</strong> Petugas memeriksa kelengkapan persyaratan dokumen sesuai ketentuan yang berlaku.</li><li><strong>Pemrosesan Dokumen:</strong> Petugas teknis memproses data dan melakukan validasi internal.</li><li><strong>Penerbitan Hasil:</strong> Dokumen/layanan yang telah disetujui diserahkan kepada pemohon secara langsung atau melalui unduhan digital.</li></ol><h3>Persyaratan Umum yang Perlu Disiapkan:</h3><ul><li>Identitas diri yang sah (KTP / Kartu Pelajar / Kartu Keluarga).</li><li>Formulir permohonan yang telah diisi lengkap.</li><li>Dokumen pendukung sesuai spesifikasi layanan yang diajukan.</li></ul>"
+        },
+        {
+            "type": "sambutan",
+            "title": "Sambutan Pimpinan",
+            "slug": "sambutan-pimpinan",
+            "description": "Pesan hangat, visi masa depan, dan komitmen pelayanan terbaik dari pimpinan lembaga kepada seluruh masyarakat.",
+            "content": "<p><strong>Assalamu’alaikum Warahmatullahi Wabarakatuh, Salam Sejahtera untuk Kita Semua.</strong></p><p>Puji syukur kita panjatkan ke hadirat Tuhan Yang Maha Esa atas limpahan rahmat dan karunia-Nya, sehingga portal website resmi ini dapat hadir sebagai jembatan komunikasi, informasi, dan transparansi antara lembaga kami dengan seluruh elemen masyarakat.</p><p>Di era transformasi digital saat ini, kecepatan, kemudahan, dan akurasi informasi menjadi kebutuhan mendasar. Melalui website ini, kami berkomitmen untuk menghadirkan pelayanan publik yang lebih dekat, ramah, efisien, dan akuntabel. Kami mengajak seluruh masyarakat untuk aktif memanfaatkan fasilitas informasi yang tersedia, serta memberikan saran dan masukan yang membangun demi kemajuan bersama.</p><p>Terima kasih atas kepercayaan, dukungan, dan sinergi yang terus terjalin dengan baik. Mari kita melangkah bersama menuju masa depan yang lebih maju, berdaya saing, dan sejahtera.</p><p><strong>Wassalamu’alaikum Warahmatullahi Wabarakatuh.</strong></p>",
+            "data_field": {
+                "Nama": "Dr. H. Muhammad Ardiansyah, M.Si",
+                "Jabatan": "Pimpinan / Kepala Instansi",
+                "Visi Misi": "Mewujudkan pelayanan prima yang responsif, inklusif, dan berintegritas tinggi untuk seluruh lapisan masyarakat."
+            }
+        },
+        {
+            "type": "berita",
+            "title": "Transformasi Digital Layanan Publik Terpadu Berbasis Web",
+            "slug": "transformasi-digital-layanan-publik-terpadu",
+            "category": "berita-utama",
+            "description": "Inovasi sistem informasi terintegrasi dihadirkan untuk mempercepat alur administrasi dan memudahkan masyarakat mengakses layanan secara daring.",
+            "content": "<p>Sebagai langkah nyata dalam meningkatkan efisiensi dan transparansi pelayanan kepada masyarakat, kami resmi meluncurkan portal informasi dan administrasi publik terpadu. Sistem ini dirancang untuk menjawab kebutuhan masyarakat akan layanan yang cepat, mudah, dan dapat diakses dari mana saja.</p><h3>Kemudahan Akses dan Efisiensi Waktu</h3><p>Dengan hadirnya platform daring ini, masyarakat tidak perlu lagi mengantre panjang untuk memperoleh informasi standar pelayanan, mengunduh formulir resmi, maupun memantau pengumuman terbaru. Seluruh proses informasi disajikan secara terstruktur dan transparan.</p><p>Pimpinan menyampaikan apresiasi kepada seluruh tim yang telah bekerja keras mewujudkan digitalisasi ini. Diharapkan langkah ini mampu meningkatkan kepuasan masyarakat serta mewujudkan tata kelola administrasi modern yang berdaya saing tinggi.</p>"
+        },
+        {
+            "type": "berita",
+            "title": "Kegiatan Sosialisasi dan Peningkatan Mutu Pelayanan Bersama Warga",
+            "slug": "kegiatan-sosialisasi-dan-peningkatan-mutu-pelayanan",
+            "category": "kegiatan-dan-agenda",
+            "description": "Pertemuan berkala bersama perwakilan masyarakat guna menampung aspirasi, mengevaluasi standar mutu, dan mempererat silaturahmi.",
+            "content": "<p>Telah dilaksanakan kegiatan sosialisasi program kerja dan forum konsultasi publik yang dihadiri oleh berbagai tokoh masyarakat, perwakilan pemuda, dan pemangku kepentingan setempat. Acara berlangsung dengan antusias dan menghasilkan berbagai masukan konstruktif.</p><h3>Dialog Terbuka & Evaluasi Layanan</h3><p>Dalam forum tersebut, dibahas berbagai evaluasi pelayanan selama triwulan terakhir serta pemaparan inovasi program kerja mendatang. Sinergi yang kuat antara penyelenggara layanan dan masyarakat dinilai menjadi kunci utama keberhasilan pembangunan yang merata.</p><p>Kegiatan ditutup dengan sesi tanya jawab interaktif serta komitmen bersama untuk senantiasa menjaga kerukunan dan mendukung program-program peningkatan kesejahteraan sosial.</p>"
+        },
+        {
+            "type": "berita",
+            "title": "Penghargaan Kinerja Pelayanan Publik Prima dan Transparan",
+            "slug": "penghargaan-kinerja-pelayanan-publik-prima",
+            "category": "berita-utama",
+            "description": "Apresiasi atas konsistensi dalam menghadirkan keterbukaan informasi publik dan dedikasi pelayanan tanpa pungutan liar.",
+            "content": "<p>Atas dedikasi dan kerja keras seluruh jajaran staf, lembaga kami berhasil meraih apresiasi penghargaan kategori Pelayanan Publik Prima dan Keterbukaan Informasi. Penghargaan ini menjadi pendorong semangat untuk terus memberikan yang terbaik bagi masyarakat.</p><p>Pencapaian ini tidak lepas dari partisipasi aktif masyarakat yang senantiasa memberikan masukan, kritik membangun, serta dukungan terhadap setiap program kerja yang dicanangkan.</p>"
+        },
+        {
+            "type": "berita",
+            "title": "Edukasi Pentingnya Menjaga Kebersihan dan Kelestarian Lingkungan Bersama",
+            "slug": "edukasi-menjaga-kebersihan-lingkungan-bersama",
+            "category": "edukasi-dan-artikel",
+            "description": "Langkah-langkah sederhana dan efektif dalam menciptakan lingkungan yang sehat, asri, dan nyaman untuk generasi masa depan.",
+            "content": "<p>Lingkungan yang bersih dan sehat merupakan modal utama dalam membangun masyarakat yang produktif dan bahagia. Melalui artikel ini, kami mengajak seluruh warga untuk senantiasa membiasakan pola hidup bersih dan sehat dalam kehidupan sehari-hari.</p><p>Mulai dari memilah sampah organik dan anorganik, menjaga sanitasi saluran air, hingga penghijauan pekarangan, langkah kecil yang dilakukan bersama akan membawa dampak besar bagi kenyamanan lingkungan kita bersama.</p>"
+        },
+        {
+            "type": "pengumuman",
+            "title": "Pengumuman Jadwal Pelayanan Selama Libur Nasional dan Cuti Bersama",
+            "slug": "pengumuman-jadwal-pelayanan-libur-nasional",
+            "category": "pengumuman-resmi",
+            "description": "Pemberitahuan resmi mengenai penyesuaian jam kerja dan operasional loket pelayanan masyarakat selama periode hari libur.",
+            "content": "<p>Diberitahukan kepada seluruh masyarakat dan pengguna layanan bahwa sehubungan dengan penetapan Hari Libur Nasional dan Cuti Bersama, operasional loket pelayanan tatap muka akan disesuaikan sebagai berikut:</p><ul><li><strong>Pelayanan Tatap Muka:</strong> Ditutup sementara selama hari libur resmi.</li><li><strong>Layanan Daring / Website:</strong> Tetap aktif 24 jam untuk pengunduhan formulir dan informasi umum.</li><li><strong>Pelayanan Normal:</strong> Kembali dibuka penuh pada hari kerja berikutnya mulai pukul 08.00 WIB.</li></ul><p>Demikian pengumuman ini disampaikan untuk menjadi perhatian dan dimaklumi. Atas perhatian dan kerjasamanya kami ucapkan terima kasih.</p>"
+        },
+        {
+            "type": "pengumuman",
+            "title": "Penerimaan Berkas Permohonan Pelayanan Terpadu Periode Berjalan",
+            "slug": "penerimaan-berkas-permohonan-pelayanan-terpadu",
+            "category": "jadwal-pelayanan",
+            "description": "Informasi pembukaan loket pengajuan berkas administrasi dan prosedur verifikasi online secara terpadu.",
+            "content": "<p>Bagi warga/masyarakat yang hendak mengajukan permohonan administrasi, berkas dapat diserahkan langsung ke loket pelayanan pada jam kerja atau diunggah melalui formulir permohonan online.</p><p>Pastikan seluruh kelengkapan dokumen telah sesuai dengan daftar checklist pada lembar persyaratan yang dapat diunduh di menu Pusat Unduhan.</p>"
+        },
+        {
+            "type": "galeri",
+            "title": "Dokumentasi Fasilitas dan Sarana Pelayanan Terpadu",
+            "slug": "dokumentasi-fasilitas-sarana-pelayanan",
+            "category": "fasilitas-dan-sarana",
+            "description": "Ruang pelayanan yang nyaman, modern, dan dilengkapi berbagai sarana penunjang kenyamanan masyarakat.",
+            "content": "<p>Berikut adalah dokumentasi fasilitas ruang pelayanan terpadu, area tunggu yang ramah anak dan disabilitas, serta sarana teknologi informasi pendukung pelayanan.</p>",
+            "data_loop": [
+                {
+                    "caption": "Ruang Pelayanan Terpadu Ramah Masyarakat",
+                    "Gambar": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=800&auto=format&fit=crop&q=80"
+                },
+                {
+                    "caption": "Fasilitas Komputer dan Akses Informasi Digital",
+                    "Gambar": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=800&auto=format&fit=crop&q=80"
+                },
+                {
+                    "caption": "Area Pertemuan dan Diskusi Publik",
+                    "Gambar": "https://images.unsplash.com/photo-1517048676732-d65bc937f952?w=800&auto=format&fit=crop&q=80"
+                }
+            ]
+        },
+        {
+            "type": "galeri",
+            "title": "Kegiatan Silaturahmi dan Gotong Royong Kebersamaan",
+            "slug": "kegiatan-silaturahmi-dan-gotong-royong",
+            "category": "dokumentasi-kegiatan",
+            "description": "Dokumentasi kebersamaan aparatur dan warga dalam kegiatan sosial kemasyarakatan.",
+            "content": "<p>Momen kebersamaan dalam mempererat tali persaudaraan dan gotong royong demi terwujudnya lingkungan yang harmonis dan asri.</p>",
+            "data_loop": [
+                {
+                    "caption": "Kegiatan Kerja Bakti dan Penghijauan Lingkungan",
+                    "Gambar": "https://images.unsplash.com/photo-1559027615-cd4628902d4a?w=800&auto=format&fit=crop&q=80"
+                },
+                {
+                    "caption": "Pertemuan Rutin Koordinasi Pembangunan",
+                    "Gambar": "https://images.unsplash.com/photo-1511632765486-a01980e01a18?w=800&auto=format&fit=crop&q=80"
+                }
+            ]
+        },
+        {
+            "type": "download",
+            "title": "Formulir Permohonan Layanan Administrasi Publik",
+            "slug": "formulir-permohonan-layanan-administrasi-publik",
+            "category": "formulir-pelayanan",
+            "description": "Blanko resmi permohonan layanan umum yang dapat dicetak dan diisi oleh pemohon.",
+            "content": "<p>Silakan unduh formulir permohonan resmi ini, isi data dengan lengkap dan benar, serta lampirkan berkas persyaratan pendukung saat mengajukan ke loket pelayanan.</p>"
+        },
+        {
+            "type": "download",
+            "title": "Buku Pedoman Standar Operasional Prosedur (SOP)",
+            "slug": "buku-pedoman-standar-operasional-prosedur",
+            "category": "regulasi-dan-sop",
+            "description": "Dokumen acuan tata laksana, transparansi, dan standar mutu pelayanan kelembagaan.",
+            "content": "<p>Buku pedoman resmi yang memuat rincian alur kerja, jangka waktu pelayanan, hak dan kewajiban masyarakat serta petugas pelayanan.</p>"
+        },
+        {
+            "type": "download",
+            "title": "Laporan Akuntabilitas Kinerja dan Transparansi Publik",
+            "slug": "laporan-akuntabilitas-kinerja-transparansi-publik",
+            "category": "regulasi-dan-sop",
+            "description": "Laporan keterbukaan kinerja tahunan sebagai wujud pertanggungjawaban kepada publik.",
+            "content": "<p>Laporan berkala mengenai capaian program kerja, penyerapan anggaran, dan evaluasi kepuasan masyarakat sebagai wujud transparansi.</p>"
+        },
+        {
+            "type": "banner",
+            "title": "Transformasi Pelayanan Digital Terpadu dan Prima",
+            "slug": "transformasi-pelayanan-digital-terpadu-dan-prima",
+            "category": "home-slider",
+            "description": "Mewujudkan pelayanan prima, transparan, dan terpercaya bagi seluruh masyarakat melalui kemudahan akses informasi digital yang cepat dan akurat.",
+            "thumbnail": "https://images.unsplash.com/photo-1517245386807-bb43f82c33c4?w=1200&auto=format&fit=crop&q=80",
+            "data_field": {
+                "Url": "/standar-pelayanan-dan-prosedur",
+                "Target": "_self"
+            }
+        },
+        {
+            "type": "banner",
+            "title": "Inovasi dan Komitmen Keterbukaan Informasi Publik",
+            "slug": "inovasi-dan-komitmen-keterbukaan-informasi-publik",
+            "category": "home-slider",
+            "description": "Mendukung tata kelola yang profesional, akuntabel, dan responsif terhadap kebutuhan informasi masyarakat di era modern.",
+            "thumbnail": "https://images.unsplash.com/photo-1497366216548-37526070297c?w=1200&auto=format&fit=crop&q=80",
+            "data_field": {
+                "Url": "/berita",
+                "Target": "_self"
+            }
+        },
+        {
+            "type": "banner",
+            "title": "Sinergi Bersama Menuju Kemajuan dan Kesejahteraan",
+            "slug": "sinergi-bersama-menuju-kemajuan-dan-kesejahteraan",
+            "category": "home-slider",
+            "description": "Membangun kolaborasi dan keterpaduan langkah demi pelayanan yang semakin berkualitas dan berorientasi pada kepuasan publik.",
+            "thumbnail": "https://images.unsplash.com/photo-1522071820081-009f0129c71c?w=1200&auto=format&fit=crop&q=80",
+            "data_field": {
+                "Url": "/visi-dan-misi",
+                "Target": "_self"
+            }
+        },
+        {
+            "type": "banner",
+            "title": "Pusat Pengaduan & Layanan Informasi Terpadu",
+            "slug": "pusat-pengaduan-dan-layanan-informasi-terpadu",
+            "category": "sidebar-slider",
+            "description": "Konsultasi dan bantuan administrasi cepat.",
+            "thumbnail": "https://images.unsplash.com/photo-1534536281715-e28d76689b4d?w=600&auto=format&fit=crop&q=80",
+            "data_field": {
+                "Url": "/standar-pelayanan-dan-prosedur",
+                "Target": "_self"
+            }
+        },
+        {
+            "type": "banner",
+            "title": "Unduh Buku Pedoman & Regulasi Resmi",
+            "slug": "unduh-buku-pedoman-dan-regulasi-resmi",
+            "category": "sidebar-slider",
+            "description": "Dokumen standar mutu pelayanan kelembagaan.",
+            "thumbnail": "https://images.unsplash.com/photo-1450133064473-71024230f91b?w=600&auto=format&fit=crop&q=80",
+            "data_field": {
+                "Url": "/download",
+                "Target": "_self"
+            }
+        }
+    ]
+}
