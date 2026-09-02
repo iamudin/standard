@@ -77,7 +77,7 @@
                     <div class="space-y-4">
                         <h4 class="text-sm font-bold text-white uppercase tracking-wider flex items-center gap-2">
                             <span class="w-2 h-2 rounded-full bg-brand-400"></span>
-                            Profil Lembaga
+                            Profil Instansi
                         </h4>
                         <ul class="space-y-2.5 text-xs text-slate-400">
                             <li><a href="{{ url('/tentang-kami') }}" class="hover:text-brand-400 hover:translate-x-1 inline-flex items-center gap-1.5 transition-all"><i class="fa-solid fa-angle-right text-[10px] text-slate-600"></i> Tentang Kami</a></li>
@@ -111,21 +111,21 @@
                     <div class="space-y-3 text-xs text-slate-400">
                         <div class="flex items-start gap-2.5">
                             <i class="fa-solid fa-location-dot text-brand-400 mt-0.5 w-4 flex-shrink-0"></i>
-                            <span>{{ get_option('alamat_kantor_instansi') ?? 'Jl. Merdeka No. 45, Kompleks Perkantoran Terpadu, Indonesia' }}</span>
+                            <span>{{ get_option('alamat') ?? 'Jl. Merdeka No. 45, Kompleks Perkantoran Terpadu, Indonesia' }}</span>
                         </div>
                         <div class="flex items-center gap-2.5">
                             <i class="fa-solid fa-phone text-brand-400 w-4 flex-shrink-0"></i>
-                            <span>{{ get_option('nomor_whatsapp') ?? '0812-3456-7890' }}</span>
+                            <span>{{ get_option('whatsapp') ?? '0812-3456-7890' }}</span>
                         </div>
-                        @if(get_option('email_resmi'))
+                        @if(get_option('email'))
                         <div class="flex items-center gap-2.5">
                             <i class="fa-solid fa-envelope text-brand-400 w-4 flex-shrink-0"></i>
-                            <a href="mailto:{{ get_option('email_resmi') }}" class="hover:text-white transition">{{ get_option('email_resmi') }}</a>
+                            <a href="mailto:{{ get_option('email') }}" class="hover:text-white transition">{{ get_option('email') }}</a>
                         </div>
                         @endif
                         <div class="flex items-center gap-2.5">
                             <i class="fa-solid fa-clock text-brand-400 w-4 flex-shrink-0"></i>
-                            <span>{{ get_option('jam_pelayanan') ?? 'Senin - Jumat (08.00 - 16.00)' }}</span>
+                            <span>{{ get_option('jam_kerja_organisasi') ?? 'Senin - Jumat (08.00 - 16.00)' }}</span>
                         </div>
                     </div>
                 </div>
