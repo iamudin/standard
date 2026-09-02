@@ -6,7 +6,7 @@ use_module([
     ],
     'berita' => [
         'active' => true,
-        'title' => 'Berita & Artikel',
+        'title' => 'Berita',
         'icon' => 'fa-newspaper',
         'web' => [
             'detail' => true,
@@ -48,9 +48,9 @@ use_module([
             'auto_query' => true,
         ],
     ],
-    'download' => [
+    'document' => [
         'active' => true,
-        'title' => 'Pusat Unduhan',
+        'title' => 'Dokumen',
         'icon' => 'fa-download',
         'web' => [
             'detail' => true,
@@ -60,7 +60,7 @@ use_module([
     ],
 ]);
 
-add_option('Template Standard Universal', [
+add_option('Option Template', [
     ['Hero Subtitle / Tagline', 'text', 'Portal Resmi Informasi Publik dan Pelayanan Terpadu'],
     ['Hero Deskripsi', 'textarea', 'Memberikan pelayanan prima, transparan, dan terpercaya untuk seluruh elemen masyarakat dengan kemudahan akses informasi digital yang cepat dan akurat.'],
     ['Hero Background Image', 'file'],

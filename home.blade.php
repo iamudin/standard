@@ -1,9 +1,9 @@
 @php
     $sambutan = function_exists('query') ? query()->detail('sambutan'): null;
-    $pengumuman = function_exists('query') ? query()->selectedColumn()->onType('pengumuman')->published()->latest('created_at')->take(3)->get() : collect();
-    $berita = function_exists('query') ? query()->selectedColumn()->with('category')->onType('berita')->published()->latest('created_at')->take(3)->get() : collect();
-    $galeri = function_exists('query') ? query()->selectedColumn()->with('category')->onType('galeri')->published()->latest('created_at')->take(4)->get() : collect();
-    $downloads = function_exists('query') ? query()->selectedColumn()->with('category')->onType('download')->published()->latest('created_at')->take(4)->get() : collect();
+    $pengumuman = query()->index_limit('pengumuman', 3);
+    $berita = query()->index_limit('berita', 3);
+    $galeri = query()->index_limit('galeri', 4);
+    $downloads = query()->index_limit('document', 4);
     
     // Ambil banner slider hero jika tersedia
     $heroSlides = get_banner('home-slider', 5);
