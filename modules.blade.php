@@ -17,7 +17,7 @@ use_module([
 
     'galeri' => [
         'active' => true,
-        'title' => 'Galeri Foto',
+        'title' => 'Galeri',
         'icon' => 'fa-camera',
         'web' => [
             'detail' => true,
@@ -48,9 +48,9 @@ use_module([
             'auto_query' => true,
         ],
     ],
-    'document' => [
+    'download' => [
         'active' => true,
-        'title' => 'Dokumen',
+        'title' => 'Unduhan',
         'icon' => 'fa-download',
         'web' => [
             'detail' => true,

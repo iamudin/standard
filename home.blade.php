@@ -3,7 +3,7 @@
     $pengumuman = query()->index_limit('pengumuman', 3);
     $berita = query()->index_limit('berita', 3);
     $galeri = query()->index_limit('galeri', 4);
-    $downloads = query()->index_limit('document', 4);
+    $downloads = query()->index_limit('download', 4);
     
     // Ambil banner slider hero jika tersedia
     $heroSlides = get_banner('home-slider', 5);
@@ -101,23 +101,7 @@
                                 {{ $hDesc }}
                             </p>
 
-                            <div class="pt-2 flex flex-wrap items-center justify-center gap-3.5">
-                                @if($hLink)
-                                    <a href="{{ $hLink }}" class="px-7 py-3.5 rounded-xl font-bold text-sm text-slate-900 bg-white hover:bg-slate-100 shadow-xl shadow-black/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                                        <span>Lihat Informasi Lengkap</span>
-                                        <i class="fa-solid fa-arrow-right text-brand-600"></i>
-                                    </a>
-                                @else
-                                    <a href="{{ url('/standar-pelayanan-dan-prosedur') }}" class="px-7 py-3.5 rounded-xl font-bold text-sm text-slate-900 bg-white hover:bg-slate-100 shadow-xl shadow-black/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                                        <i class="fa-solid fa-clipboard-check text-brand-600"></i>
-                                        <span>Standar Layanan</span>
-                                    </a>
-                                    <a href="{{ url('/download') }}" class="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md transition-all flex items-center gap-2">
-                                        <i class="fa-solid fa-download text-brand-300"></i>
-                                        <span>Pusat Unduhan</span>
-                                    </a>
-                                @endif
-                            </div>
+                        
                         </div>
                     @endforeach
                 </div>
@@ -136,16 +120,7 @@
                     {{ get_option('hero_deskripsi') ?? 'Memberikan pelayanan prima, transparan, dan terpercaya untuk seluruh masyarakat dengan kemudahan akses informasi publik yang cepat, akurat, dan terintegrasi.' }}
                 </p>
 
-                <div class="pt-2 flex flex-wrap items-center justify-center gap-3.5">
-                    <a href="{{ url('/standar-pelayanan-dan-prosedur') }}" class="px-7 py-3.5 rounded-xl font-bold text-sm text-slate-900 bg-white hover:bg-slate-100 shadow-xl shadow-black/20 transition-all transform hover:-translate-y-0.5 flex items-center gap-2">
-                        <i class="fa-solid fa-clipboard-check text-brand-600"></i>
-                        <span>Standar Layanan</span>
-                    </a>
-                    <a href="{{ url('/download') }}" class="px-7 py-3.5 rounded-xl font-bold text-sm text-white bg-white/15 hover:bg-white/25 border border-white/30 backdrop-blur-md transition-all flex items-center gap-2">
-                        <i class="fa-solid fa-download text-brand-300"></i>
-                        <span>Pusat Unduhan</span>
-                    </a>
-                </div>
+            
             @endif
 
         </div>
@@ -264,18 +239,12 @@
                         <i class="fa-solid fa-quote-left"></i>
                         <span>Kata Sambutan</span>
                     </div>
-                    <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 tracking-tight">
-                        {{ $sambutan->title ?? 'Mewujudkan Pelayanan Terbaik Bagi Masyarakat' }}
-                    </h2>
+               
                     <div class="text-sm text-slate-600 leading-relaxed line-clamp-4">
                         {!! $sambutan->content !!}
                     </div>
                     
-                    @if(isset($sambutan->field?->visi_misi))
-                        <div class="p-4 rounded-2xl bg-white border border-slate-200/80 text-xs text-slate-700 font-medium italic border-l-4 border-l-brand-600">
-                            "{{ $sambutan->field?->visi_misi ?? '' }}"
-                        </div>
-                    @endif
+              
 
                     <div class="pt-2">
                         <a href="{{ url($sambutan->url) }}" class="inline-flex items-center gap-2 px-5 py-2.5 rounded-xl font-bold text-xs text-white brand-gradient hover:opacity-95 shadow transition">

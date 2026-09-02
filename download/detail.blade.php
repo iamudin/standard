@@ -1,5 +1,6 @@
 @php
     $fileDownload = $detail?->field?->file ?? null;
+    $media = media_exists($fileDownload) ? media($fileDownload) : null;
 @endphp
 
 <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
@@ -51,29 +52,50 @@
                 <div class="p-6 sm:p-8 rounded-2xl bg-purple-50/90 border border-purple-200 flex flex-col sm:flex-row items-center justify-between gap-6 shadow-sm">
                     <div class="flex items-center gap-4">
                         <div class="w-14 h-14 rounded-2xl bg-purple-600 text-white flex items-center justify-center text-2xl flex-shrink-0 shadow">
-                            <i class="fa-solid fa-file-pdf"></i>
+                            <i class="fa-solid fa-file-arrow-down"></i>
                         </div>
                         <div>
                             <h2 class="text-base font-bold text-slate-900">{{ $detail->title }}</h2>
-                            <p class="text-xs text-slate-500 mt-0.5">Berkas resmi dapat langsung diunduh dan digunakan.</p>
+                            @if($media)
+                                <div class="flex flex-wrap items-center gap-2 sm:gap-3 text-xs text-slate-500 mt-1.5 font-medium">
+                                    <span class="inline-flex items-center px-2 py-0.5 rounded-md bg-purple-100 text-purple-700 font-bold uppercase text-[11px]">
+                                        {{ $media->extension() }}
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="inline-flex items-center gap-1">
+                                        <i class="fa-solid fa-hard-drive text-slate-400 text-[11px]"></i>
+                                        <span>{{ $media->size() }}</span>
+                                    </span>
+                                    <span>&bull;</span>
+                                    <span class="inline-flex items-center gap-1">
+                                        <i class="fa-solid fa-download text-slate-400 text-[11px]"></i>
+                                        <span>{{ $media->hits() }}x diunduh</span>
+                                    </span>
+                                </div>
+                            @else
+                                <p class="text-xs text-slate-500 mt-0.5">Berkas resmi dapat langsung diunduh dan digunakan.</p>
+                            @endif
                         </div>
                     </div>
 
-                    @if($fileDownload)
-                        <a href="{{ media_exists($fileDownload) ? media($fileDownload)->download() : 'javascript:void(0);' }}" download target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 flex-shrink-0 transform hover:-translate-y-0.5">
+                    @if($media)
+                        <a href="{{ $media->download() }}" download target="_blank" class="w-full sm:w-auto px-6 py-3.5 rounded-xl bg-purple-600 hover:bg-purple-700 text-white font-bold text-xs shadow-md transition flex items-center justify-center gap-2 flex-shrink-0 transform hover:-translate-y-0.5">
                             <i class="fa-solid fa-download text-sm"></i>
                             <span>Unduh Berkas Sekarang</span>
                         </a>
-                  
                     @endif
                 </div>
 
+                @if($media)
+                    <div class="my-6 rounded-2xl overflow-hidden border border-slate-200 shadow-sm bg-slate-50">
+                        {{ $media->embed() }}
+                    </div>
+                @endif
                 <!-- Document Description Body -->
-                @if(!empty($detail->content) || !empty($detail->description))
+                @if(!empty($detail->content))
                     <div class="pt-4 space-y-3 text-slate-700 text-sm sm:text-base leading-relaxed">
-                        <h3 class="text-sm font-bold uppercase tracking-wider text-slate-900">Deskripsi & Petunjuk Dokumen</h3>
                         <div class="prose prose-slate max-w-none text-sm text-slate-600">
-                            {!! $detail->content ?? $detail->description !!}
+                            {!! $detail->content !!}
                         </div>
                     </div>
                 @endif

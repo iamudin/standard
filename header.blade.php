@@ -1,19 +1,7 @@
 <!DOCTYPE html>
 <html lang="id" class="scroll-smooth">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    
-    <!-- Title & SEO Metadata -->
-    <title>{{ get_option('site_title') ?? 'Portal Resmi - Standard Universal' }}</title>
-    <meta name="description" content="{{ get_option('site_description') ?? 'Portal resmi informasi publik, layanan terpadu, pengumuman, dan publikasi kegiatan terpercaya.' }}">
-    
-    @if(get_option('site_favicon'))
-        <link rel="icon" type="image/x-icon" href="{{ get_option('site_favicon') }}">
-    @endif
-
-    <!-- Google Fonts: Plus Jakarta Sans -->
+     <!-- Google Fonts: Plus Jakarta Sans -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -130,32 +118,32 @@
                     <i class="fa-regular fa-clock text-brand-400"></i>
                     <span>{{ get_option('jam_pelayanan') ?? 'Senin - Jumat: 08.00 - 16.00 WIB' }}</span>
                 </div>
-                @if(get_option('email_resmi'))
+                @if(get_option('email'))
                 <div class="hidden md:flex items-center gap-1.5">
                     <i class="fa-regular fa-envelope text-brand-400"></i>
-                    <a href="mailto:{{ get_option('email_resmi') }}" class="hover:text-white transition">{{ get_option('email_resmi') }}</a>
+                    <a href="mailto:{{ get_option('email') }}" class="hover:text-white transition">{{ get_option('email_resmi') }}</a>
                 </div>
                 @endif
             </div>
 
             <div class="flex items-center gap-4">
-                @if(get_option('nomor_whatsapp'))
-                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', get_option('nomor_whatsapp')) }}" target="_blank" class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition">
+                @if(get_option('whatsapp'))
+                <a href="https://wa.me/{{ preg_replace('/[^0-9]/', '', get_option('whatsapp')) }}" target="_blank" class="flex items-center gap-1.5 text-emerald-400 hover:text-emerald-300 font-medium transition">
                     <i class="fab fa-whatsapp"></i>
-                    <span>{{ get_option('nomor_whatsapp') }}</span>
+                    <span>{{ get_option('whatsapp') }}</span>
                 </a>
                 @endif
 
                 <!-- Social Links -->
                 <div class="flex items-center gap-3 border-l border-slate-700 pl-4">
-                    @if(get_option('link_facebook'))
-                        <a href="{{ get_option('link_facebook') }}" target="_blank" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
+                    @if(get_option('facebook'))
+                        <a href="{{ get_option('facebook') }}" target="_blank" class="hover:text-white transition" aria-label="Facebook"><i class="fab fa-facebook-f"></i></a>
                     @endif
-                    @if(get_option('link_instagram'))
-                        <a href="{{ get_option('link_instagram') }}" target="_blank" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                    @if(get_option('instagram'))
+                        <a href="{{ get_option('instagram') }}" target="_blank" class="hover:text-white transition" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
                     @endif
-                    @if(get_option('link_youtube'))
-                        <a href="{{ get_option('link_youtube') }}" target="_blank" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
+                    @if(get_option('youtube'))
+                        <a href="{{ get_option('youtube') }}" target="_blank" class="hover:text-white transition" aria-label="YouTube"><i class="fab fa-youtube"></i></a>
                     @endif
                 </div>
             </div>

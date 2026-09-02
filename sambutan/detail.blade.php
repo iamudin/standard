@@ -31,8 +31,8 @@
                 <!-- Leader Profile Card Presentation -->
                 <div class="p-6 sm:p-8 rounded-2xl bg-slate-50 border border-slate-200/80 flex flex-col sm:flex-row items-center sm:items-start gap-6">
                     <div class="relative flex-shrink-0">
-                        @if(!empty($detail->thumbnail))
-                            <img src="{{ $detail->thumbnail }}" alt="{{ $detail->field?->name ?? $detail->field?->nama ?? 'Pimpinan' }}" class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl object-cover shadow border-4 border-white">
+                        @if(!empty($detail->media))
+                            <img src="{{ $detail->thumbnail }}" alt="{{ $detail->field?->name ?? $detail->field?->nama ?? 'Pimpinan' }}" class="w-auto max-w-[200px] sm:max-w-[240px] max-h-[360px] h-auto rounded-2xl object-contain shadow border-4 border-white block">
                         @else
                             <div class="w-36 h-36 sm:w-44 sm:h-44 rounded-2xl brand-gradient text-white flex items-center justify-center text-5xl shadow border-4 border-white">
                                 <i class="fa-solid fa-user-tie"></i>
@@ -46,7 +46,7 @@
                     <div class="text-center sm:text-left space-y-2 flex-grow">
                         <span class="text-xs font-bold uppercase tracking-wider text-brand-600">Pemberi Sambutan</span>
                         <h2 class="text-lg sm:text-xl font-bold text-slate-900">
-                            {{ $detail->field?->name ?? $detail->field?->nama ?? $detail->title ?? 'Pimpinan Lembaga' }}
+                            {{ $detail->field?->nama?? $detail->title ?? 'Pimpinan Lembaga' }}
                         </h2>
                         <p class="text-xs font-semibold text-slate-500">
                             {{ $detail->field?->jabatan ?? 'Kepala / Pimpinan Lembaga' }}
