@@ -4,21 +4,26 @@
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 lg:gap-8">
                 
                 <!-- Col 1: Brand & Profile Summary -->
+                @php
+                    $siteLogo = get_option('logo') ?: get_option('site_logo');
+                @endphp
                 <div class="space-y-4">
-                    <div class="flex items-center gap-3">
-                        @if(get_option('site_logo'))
-                            <img src="{{ get_option('site_logo') }}" alt="{{ get_option('site_title') ?? 'Logo' }}" class="h-10 w-auto max-w-[180px] object-contain brightness-0 invert">
-                        @else
+                    @if($siteLogo)
+                        <a href="{{ url('/') }}" class="inline-block">
+                            <img src="{{ url('logo.webp')}}" alt="{{ get_option('site_title') ?? 'Logo' }}" class="h-10 w-auto max-w-[200px] object-contain ">
+                        </a>
+                    @else
+                        <div class="flex items-center gap-3">
                             <div class="w-10 h-10 rounded-xl brand-gradient flex items-center justify-center text-white text-lg font-bold">
                                 <i class="fa-solid fa-shapes"></i>
                             </div>
-                        @endif
-                        <span class="font-extrabold text-lg text-white tracking-tight">
-                            {{ get_option('site_title') ?? 'Standard Universal' }}
-                        </span>
-                    </div>
+                            <span class="font-extrabold text-lg text-white tracking-tight">
+                                {{ get_option('site_title') ?? 'Standard Universal' }}
+                            </span>
+                        </div>
+                    @endif
                     <p class="text-xs text-slate-400 leading-relaxed">
-                        {{ get_option('site_description') ?? 'Portal resmi informasi publik dan pelayanan terpadu yang berkomitmen menghadirkan keterbukaan informasi, efisiensi birokrasi, dan kemudahan akses bagi seluruh masyarakat.' }}
+                        {{ get_option('keterangan_organisasi') ?? 'Portal resmi informasi publik dan pelayanan terpadu yang berkomitmen menghadirkan keterbukaan informasi, efisiensi birokrasi, dan kemudahan akses bagi seluruh masyarakat.' }}
                     </p>
 
                     <div class="pt-2 flex items-center gap-3">

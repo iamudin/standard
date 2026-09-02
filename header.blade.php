@@ -168,23 +168,28 @@
             <div class="flex justify-between items-center h-20">
                 
                 <!-- Logo & Brand Title -->
-                <a href="{{ url('/') }}" class="flex items-center gap-3.5 group flex-shrink-0">
-                    @if(get_option('site_logo'))
-                        <img src="{{ get_option('site_logo') }}" alt="{{ get_option('site_title') ?? 'Logo' }}" class="h-11 w-auto max-w-[180px] object-contain transition-transform group-hover:scale-105">
-                    @else
+                @php
+                    $siteLogo = get_option('logo') ?: get_option('site_logo');
+                @endphp
+                @if($siteLogo)
+                    <a href="{{ url('/') }}" class="flex items-center group flex-shrink-0">
+                        <img src="{{ url('logo.webp') }}" alt="{{ get_option('site_title') ?? 'Logo' }}" class="h-14 w-auto ">
+                    </a>
+                @else
+                    <a href="{{ url('/') }}" class="flex items-center gap-3.5 group flex-shrink-0">
                         <div class="w-11 h-11 rounded-xl brand-gradient flex items-center justify-center text-white text-lg font-bold shadow-md shadow-brand-500/20 group-hover:scale-105 transition-transform">
                             <i class="fa-solid fa-shapes"></i>
                         </div>
-                    @endif
-                    <div class="flex flex-col">
-                        <span class="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight leading-snug group-hover:text-brand-600 transition-colors">
-                            {{ get_option('site_title') ?? 'Standard Universal' }}
-                        </span>
-                        <span class="text-[11px] text-slate-500 font-medium line-clamp-1 max-w-[240px]">
-                            {{ get_option('site_tagline') ?? get_option('hero_subtitle_tagline') ?? 'Portal Informasi & Pelayanan Terpadu' }}
-                        </span>
-                    </div>
-                </a>
+                        <div class="flex flex-col">
+                            <span class="font-extrabold text-base sm:text-lg text-slate-900 tracking-tight leading-snug group-hover:text-brand-600 transition-colors">
+                                {{ get_option('site_title') ?? 'Standard Universal' }}
+                            </span>
+                            <span class="text-[11px] text-slate-500 font-medium line-clamp-1 max-w-[240px]">
+                                {{ get_option('site_tagline') ?? get_option('hero_subtitle_tagline') ?? 'Portal Informasi & Pelayanan Terpadu' }}
+                            </span>
+                        </div>
+                    </a>
+                @endif
 
                 <!-- Desktop Navigation Menu -->
                 @php
@@ -277,9 +282,9 @@
                         <i class="fa-solid fa-magnifying-glass text-sm"></i>
                     </button>
 
-                    <a href="{{ url('/#kontak') }}" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm text-white brand-gradient hover:opacity-95 shadow-md shadow-brand-500/20 transition-all transform hover:-translate-y-0.5">
+                    <!-- <a href="{{ url('/#kontak') }}" class="inline-flex items-center justify-center px-5 py-2.5 rounded-xl font-bold text-sm text-white brand-gradient hover:opacity-95 shadow-md shadow-brand-500/20 transition-all transform hover:-translate-y-0.5">
                         <i class="fa-solid fa-paper-plane mr-2 text-xs"></i> Hubungi Kami
-                    </a>
+                    </a> -->
                 </div>
 
                 <!-- Mobile Hamburger Button -->
@@ -339,11 +344,11 @@
                     <a href="{{ url('/#kontak') }}" class="px-3 py-2.5 rounded-xl hover:bg-slate-100">Kontak</a>
                 @endif
 
-                <div class="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-2">
+                <!-- <div class="pt-4 mt-2 border-t border-slate-100 flex flex-col gap-2">
                     <a href="{{ url('/#kontak') }}" class="w-full text-center px-4 py-3 rounded-xl font-bold text-white brand-gradient shadow-md">
                         <i class="fa-solid fa-paper-plane mr-2"></i> Hubungi Kami
                     </a>
-                </div>
+                </div> -->
             </div>
         </div>
     </header>

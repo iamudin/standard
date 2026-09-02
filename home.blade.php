@@ -242,9 +242,9 @@
                 
                 <!-- Foto Pimpinan -->
                 <div class="lg:col-span-4 flex flex-col items-center text-center">
-                    <div class="relative mb-4">
+                    <div class="relative mb-4 inline-block">
                         @if(!empty($sambutan->thumbnail))
-                            <img src="{{ $sambutan->thumbnail }}" alt="{{ $sambutan->field?->name ?? $sambutan->field?->nama ?? 'Pimpinan' }}" class="w-44 h-44 sm:w-52 sm:h-52 rounded-3xl object-cover shadow-card border-4 border-white">
+                            <img src="{{ $sambutan->thumbnail }}" alt="{{ $sambutan->field?->name ?? $sambutan->field?->nama ?? 'Pimpinan' }}" class="w-auto max-w-[240px] sm:max-w-[280px] max-h-[380px] sm:max-h-[440px] h-auto rounded-3xl object-contain shadow-card border-4 border-white block mx-auto">
                         @else
                             <div class="w-44 h-44 sm:w-52 sm:h-52 rounded-3xl brand-gradient flex items-center justify-center text-white text-5xl shadow-card border-4 border-white">
                                 <i class="fa-solid fa-user-tie"></i>

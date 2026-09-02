@@ -2,10 +2,10 @@
     $siblingCategories = query()->index_category('pengumuman');
 @endphp
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
     
     <!-- Breadcrumb Navigation -->
-    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-6">
+    <nav class="flex items-center flex-wrap gap-2 text-xs font-semibold text-slate-500 mb-6">
         <a href="{{ url('/') }}" class="hover:text-brand-600 flex items-center gap-1.5">
             <i class="fa-solid fa-house text-[10px]"></i>
             <span>Beranda</span>
@@ -13,18 +13,18 @@
         <i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i>
         <a href="{{ url('pengumuman') }}" class="hover:text-brand-600">Pengumuman</a>
         <i class="fa-solid fa-angle-right text-[10px] text-slate-400"></i>
-        <span class="text-slate-900">Kategori: {{ $category->name }}</span>
+        <span class="text-slate-900 line-clamp-1 max-w-[200px] sm:max-w-none">Kategori: {{ $category->name }}</span>
     </nav>
 
     <!-- Category Header Banner -->
-    <div class="rounded-3xl hero-gradient text-white p-8 sm:p-10 mb-10 shadow-card relative overflow-hidden">
+    <div class="rounded-3xl hero-gradient text-white p-6 sm:p-10 mb-8 sm:mb-10 shadow-card relative overflow-hidden">
         <div class="absolute inset-0 opacity-15 pointer-events-none bg-[radial-gradient(#38bdf8_1px,transparent_1px)] [background-size:20px_20px]"></div>
         <div class="relative z-10 space-y-2">
             <div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-white/10 text-xs font-bold text-amber-200 backdrop-blur-md">
                 <i class="fa-solid fa-bullhorn text-[10px]"></i>
                 <span>Kategori Pengumuman</span>
             </div>
-            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight">
+            <h1 class="text-2xl sm:text-3xl lg:text-4xl font-extrabold text-white tracking-tight break-words">
                 {{ $category->name }}
             </h1>
             <p class="text-xs sm:text-sm text-slate-200 max-w-2xl leading-relaxed">
@@ -35,27 +35,27 @@
 
     <!-- Category Filter Tabs -->
     @if($siblingCategories->count() > 0)
-        <div class="flex items-center gap-2 overflow-x-auto pb-4 mb-8 no-scrollbar">
-            <a href="{{ url('pengumuman') }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition">
+        <div class="flex items-center gap-2 overflow-x-auto pb-3 mb-8 no-scrollbar w-full">
+            <a href="{{ url('pengumuman') }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap bg-white text-slate-700 hover:bg-slate-100 border border-slate-200 transition flex-shrink-0">
                 Semua Kategori
             </a>
             @foreach($siblingCategories as $c)
-                <a href="{{ url($c->url) }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all {{ $c->slug == $category->slug ? 'bg-brand-600 text-white shadow-sm' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200' }}">
+                <a href="{{ url($c->url) }}" class="px-4 py-2 rounded-xl text-xs font-bold whitespace-nowrap transition-all flex-shrink-0 {{ $c->slug == $category->slug ? 'bg-brand-600 text-white shadow-sm' : 'bg-white text-slate-700 hover:bg-slate-100 border border-slate-200' }}">
                     {{ $c->name }} ({{ $c->posts_count }})
                 </a>
             @endforeach
         </div>
     @endif
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         
         <!-- Main Listing Content (8 cols) -->
-        <div class="lg:col-span-8 space-y-4">
+        <div class="lg:col-span-8 min-w-0 space-y-4">
             @if(isset($index) && count($index) > 0)
                 @foreach($index as $row)
-                    <div class="bg-white rounded-2xl p-6 border border-slate-200/80 shadow-soft hover:shadow-card-hover transition flex flex-col justify-between group">
+                    <div class="bg-white rounded-2xl p-5 sm:p-6 border border-slate-200/80 shadow-soft hover:shadow-card-hover transition flex flex-col justify-between group overflow-hidden">
                         <div>
-                            <div class="flex items-center justify-between gap-2 mb-3">
+                            <div class="flex flex-wrap items-center justify-between gap-2 mb-3">
                                 <span class="px-2.5 py-1 rounded-lg text-[11px] font-bold bg-amber-50 text-amber-700 border border-amber-200/60 flex items-center gap-1">
                                     <i class="fa-solid fa-bullhorn text-[10px]"></i>
                                     <span>{{ $category->name }}</span>
@@ -65,16 +65,16 @@
                                 </span>
                             </div>
 
-                            <h2 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-600 transition leading-snug">
+                            <h2 class="text-base sm:text-lg font-bold text-slate-900 group-hover:text-brand-600 transition leading-snug break-words">
                                 <a href="{{ url($row->url) }}">{{ $row->title }}</a>
                             </h2>
 
-                            <p class="text-xs sm:text-sm text-slate-500 line-clamp-3 leading-relaxed mt-2">
+                            <p class="text-xs sm:text-sm text-slate-500 line-clamp-3 leading-relaxed mt-2 break-words">
                                 {{ Str::limit(strip_tags($row->short_content ?? $row->content ?? ''), 150) }}
                             </p>
                         </div>
 
-                        <div class="pt-4 mt-4 border-t border-slate-100 flex items-center justify-between">
+                        <div class="pt-4 mt-4 border-t border-slate-100 flex flex-wrap items-center justify-between gap-2">
                             <span class="text-[11px] text-slate-400">
                                 <i class="fa-regular fa-eye mr-1"></i> {{ $row->visited ?? 0 }}x dibaca
                             </span>
@@ -88,12 +88,12 @@
 
                 <!-- Pagination -->
                 @if(method_exists($index, 'links'))
-                    <div class="pt-6 flex justify-center">
+                    <div class="pt-6 flex justify-center overflow-x-auto max-w-full">
                         {{ $index->links() }}
                     </div>
                 @endif
             @else
-                <div class="bg-white rounded-3xl p-12 text-center border border-slate-200 shadow-soft">
+                <div class="bg-white rounded-3xl p-8 sm:p-12 text-center border border-slate-200 shadow-soft">
                     <div class="w-16 h-16 rounded-2xl bg-amber-50 text-amber-600 flex items-center justify-center text-2xl mx-auto mb-4">
                         <i class="fa-solid fa-bullhorn"></i>
                     </div>
@@ -110,7 +110,7 @@
         </div>
 
         <!-- Sidebar Widget (4 cols) -->
-        <div class="lg:col-span-4">
+        <div class="lg:col-span-4 min-w-0">
             {{ get_element('sidebar') }}
         </div>
 

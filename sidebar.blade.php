@@ -16,7 +16,6 @@
 
 <!-- Sticky Sidebar Container -->
 <div class="space-y-6 sticky top-24">
-    {{ query()->archive('berita') }}
     <!-- 1. Full-Width Auto-Height Banner Slider Widget (No Card Padding, Smooth Height Animation) -->
     @if(!empty($sliderItems) && count($sliderItems) > 0)
         <div class="relative w-full rounded-2xl overflow-hidden shadow-soft border border-slate-200/80 bg-slate-900 group"
@@ -88,6 +87,7 @@
 
         </div>
     @endif
+     {{ query()->archive('berita') }}
 
     <!-- 2. Pengumuman Terbaru Widget -->
     @if($sidePengumuman->count() > 0)

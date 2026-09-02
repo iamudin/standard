@@ -2,10 +2,10 @@
     $fileDownload = $detail?->field?->lampiran ?? null;
 @endphp
 
-<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10">
+<div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 w-full">
     
     <!-- Breadcrumb Navigation -->
-    <nav class="flex items-center gap-2 text-xs font-semibold text-slate-500 mb-6">
+    <nav class="flex items-center flex-wrap gap-2 text-xs font-semibold text-slate-500 mb-6">
         <a href="{{ url('/') }}" class="hover:text-brand-600 flex items-center gap-1.5">
             <i class="fa-solid fa-house text-[10px]"></i>
             <span>Beranda</span>
@@ -16,11 +16,11 @@
         <span class="text-slate-900 line-clamp-1 max-w-[200px] sm:max-w-md">{{ $detail->title }}</span>
     </nav>
 
-    <div class="grid grid-cols-1 lg:grid-cols-12 gap-10">
+    <div class="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-10">
         
         <!-- Main Detail Article (8 cols) -->
-        <div class="lg:col-span-8">
-            <article class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-soft space-y-6">
+        <div class="lg:col-span-8 min-w-0">
+            <article class="bg-white rounded-3xl p-6 sm:p-10 border border-slate-200/80 shadow-soft space-y-6 overflow-hidden">
                 
                 <!-- Notice Callout / Badge -->
                 <div class="space-y-4 pb-6 border-b border-slate-100">

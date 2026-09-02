@@ -59,8 +59,8 @@
                 </div>
 
                 <!-- Featured Image if available -->
-                @if(!empty($detail->thumbnail))
-                    <div class="mb-8 rounded-2xl overflow-hidden shadow-sm aspect-[16/9] bg-slate-100">
+                @if(!empty($detail->media))
+                    <div class="mb-8 rounded-2xl overflow-hidden shadow-sm  bg-slate-100">
                         <img src="{{ $detail->thumbnail }}" alt="{{ $detail->title }}" class="w-full h-full object-cover">
                     </div>
                 @endif
