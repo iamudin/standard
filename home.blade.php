@@ -503,7 +503,7 @@
                             </div>
                             <div>
                                 <span class="block font-bold text-slate-900 text-xs">Alamat Kantor</span>
-                                <span class="text-slate-500 text-xs">{{ get_option('alamat_kantor_instansi') ?? 'Jl. Merdeka No. 45, Kompleks Perkantoran Terpadu, Indonesia' }}</span>
+                                <span class="text-slate-500 text-xs">{{ get_option('alamat') ?? 'Jl. Merdeka No. 45, Kompleks Perkantoran Terpadu, Indonesia' }}</span>
                             </div>
                         </div>
 
@@ -513,7 +513,7 @@
                             </div>
                             <div>
                                 <span class="block font-bold text-slate-900 text-xs">Jam Layanan</span>
-                                <span class="text-slate-500 text-xs">{{ get_option('jam_pelayanan') ?? 'Senin - Jumat: 08.00 - 16.00 WIB' }}</span>
+                                <span class="text-slate-500 text-xs">{{ get_option('jam_kerja_organisasi') ?? 'Senin - Jumat: 08.00 - 16.00 WIB' }}</span>
                             </div>
                         </div>
 
@@ -523,7 +523,7 @@
                             </div>
                             <div>
                                 <span class="block font-bold text-slate-900 text-xs">WhatsApp Layanan</span>
-                                <span class="text-slate-500 text-xs">{{ get_option('nomor_whatsapp') ?? '0812-3456-7890' }}</span>
+                                <span class="text-slate-500 text-xs">{{ get_option('whatsapp') ?? '0812-3456-7890' }}</span>
                             </div>
                         </div>
 
@@ -533,7 +533,7 @@
                             </div>
                             <div>
                                 <span class="block font-bold text-slate-900 text-xs">Email Resmi</span>
-                                <span class="text-slate-500 text-xs">{{ get_option('email_resmi') ?? 'kontak@instansi.id' }}</span>
+                                <span class="text-slate-500 text-xs">{{ get_option('email') ?? 'kontak@instansi.id' }}</span>
                             </div>
                         </div>
                     </div>
@@ -541,8 +541,8 @@
 
                 <!-- Google Maps / Lokasi -->
                 <div class="lg:col-span-7 rounded-2xl overflow-hidden border border-slate-200 min-h-[300px] relative bg-slate-100">
-                    @if(get_option('google_maps_embed_url'))
-                        <iframe src="{{ get_option('google_maps_embed_url') }}" width="100%" height="100%" style="border:0; min-height: 320px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                     @if (get_option('latitude') && get_option('longitude'))
+                        <iframe src="{{ map_by_coordinate(get_option('longitude'), get_option('latitude')) }}" width="100%" height="100%" style="border:0; min-height: 320px;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
                     @else
                         <div class="w-full h-full min-h-[320px] flex flex-col items-center justify-center text-slate-400 p-6 text-center">
                             <i class="fa-solid fa-map-location-dot text-4xl text-brand-500 mb-3"></i>

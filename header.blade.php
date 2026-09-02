@@ -116,12 +116,12 @@
             <div class="flex flex-wrap items-center justify-center sm:justify-start gap-4">
                 <div class="flex items-center gap-1.5">
                     <i class="fa-regular fa-clock text-brand-400"></i>
-                    <span>{{ get_option('jam_pelayanan') ?? 'Senin - Jumat: 08.00 - 16.00 WIB' }}</span>
+                    <span>{{ get_option('jam_kerja_organisasi') ?? 'Senin - Jumat: 08.00 - 16.00 WIB' }}</span>
                 </div>
                 @if(get_option('email'))
                 <div class="hidden md:flex items-center gap-1.5">
                     <i class="fa-regular fa-envelope text-brand-400"></i>
-                    <a href="mailto:{{ get_option('email') }}" class="hover:text-white transition">{{ get_option('email_resmi') }}</a>
+                    <a href="mailto:{{ get_option('email') }}" class="hover:text-white transition">{{ get_option('email') }}</a>
                 </div>
                 @endif
             </div>
